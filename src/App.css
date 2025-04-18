@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.theme-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
