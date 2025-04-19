@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import themes from "../data/themes.json";
-import { scoreArticleWithLLM } from "../utils/llmScorer";
 import TimelineEvent from "../components/TimelineEvent";
 function ThemePage() {
   const { id } = useParams();
@@ -12,50 +11,85 @@ function ThemePage() {
   const [detailLevel, setDetailLevel] = useState(2); // 1 = concise, 2 = balanced, 3 = detailed
   
   const filteredArticles = articles.filter(
-    (article) => article.significanceScore >= detailLevel
-  );
+    (article) => article.significance <= detailLevel
+  );  
+
+  const fetchTimelineFromGroq = useCallback(async () => {
+    setLoading(true);
+  
+    const prompt = `
+  You are a timeline builder for a news explainer app.
+  
+  Create a JSON array of 20 to 25 key events about the topic: "${theme.title}".
+  
+  Each event should include:
+  - "title": a short, news-style headline
+  - "date": in ISO format (YYYY-MM-DD)
+  - "snippet": a 2–3 sentence summary
+  - "significance": an integer from 1 to 3, where:
+    - 1 = most significant turning point or milestone
+    - 2 = Very significant but sloghtly less significant than the most significant
+    - 3 = Very significant but slightly less significant than the top 2 levels of significance
+  - "thumbnail": a relevant image URL (or "null" if none)
+  
+  The number of events should depend on the topic’s complexity and timespan.
+  
+  Select events based on their significance in the complete lifecycle of the story of this news event.
+  
+  Respond ONLY with the JSON array, without additional explanation.
+  `;
+  
+    try {
+      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_GROQ_API_KEY}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          model: "llama-3.3-70b-versatile",
+          messages: [
+            { role: "system", content: "You are a helpful assistant." },
+            { role: "user", content: prompt }
+          ],
+          temperature: 0.3
+        })
+      });
+  
+      const data = await res.json();
+      const jsonText = data?.choices?.[0]?.message?.content
+      let timelineData = [];
+
+      try {
+        // Remove backticks and unescape double-escaped quotes
+        const cleaned = jsonText
+          .trim()
+          .replace(/^`+/, "")    // Remove starting backticks
+          .replace(/`+$/, "")    // Remove ending backticks
+          .replace(/\\n/g, "")
+          .replace(/\\"/g, '"')
+          .replace(/<|>/g, "");  // Optional: remove angle brackets around URLs
+      
+        timelineData = JSON.parse(cleaned);
+      } catch (err) {
+        console.error("Failed to parse LLM timeline JSON:", err, jsonText);
+      }
+
+      setArticles(timelineData);
+    } catch (err) {
+      console.error("Error generating timeline:", err);
+    } finally {
+      setLoading(false);
+    }
+  }, [theme]);
+
+  
 
   useEffect(() => {
-    if (!theme) return;
-  
-    const fetchAndScoreArticles = async () => {
-      try {
-        const response = await fetch(
-          `https://newsapi.org/v2/everything?q=${encodeURIComponent(
-            theme.query
-          )}&sortBy=publishedAt&pageSize=15&apiKey=${
-            process.env.REACT_APP_NEWS_API_KEY
-          }`
-        );
-  
-        const data = await response.json();
-        const rawArticles = data.articles || [];
-  
-        const scored = await Promise.all(
-          rawArticles.map(async (article) => {
-            const score = await scoreArticleWithLLM(article);
-            return { ...article, significanceScore: score };
-          })
-        );
-  
-        const final = scored
-          .filter((a) => a.significanceScore >= 3)
-          .sort((a, b) =>
-            b.significanceScore === a.significanceScore
-              ? new Date(a.publishedAt) - new Date(b.publishedAt)
-              : b.significanceScore - a.significanceScore
-          );
-  
-        setArticles(final);
-      } catch (error) {
-        console.error("Error fetching or scoring articles:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-  
-    fetchAndScoreArticles();
-  }, [theme]);
+    if (theme) {
+      fetchTimelineFromGroq();
+    }
+  }, [theme, fetchTimelineFromGroq]);
 
   if (!theme) {
     return <div>Theme not found.</div>;
@@ -104,17 +138,18 @@ function ThemePage() {
       ) : (
         <div>
           <h2>📰 Recent Articles</h2>
-             {loading ? (
-              <p>Loading timeline...</p>
-            ) : filteredArticles.length === 0 ? (
-              <p>No events at this detail level.</p>
-            ) : (
-              <div className="timeline">
-                {filteredArticles.map((article, index) => (
-                  <TimelineEvent key={index} article={article} />
-                ))}
-              </div>
-            )}
+          {loading ? (
+  <p>Loading timeline...</p>
+) : filteredArticles.length === 0 ? (
+  <p>No events at this detail level.</p>
+) : (
+  <div className="timeline">
+    {filteredArticles.map((article, index) => (
+      <TimelineEvent key={index} article={article} />
+    ))}
+  </div>
+)}
+
         </div>
       )}
     </div>
