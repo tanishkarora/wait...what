@@ -92,4 +92,20 @@
     line-height: 1.4;
   }
   
+  .homepage {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
   
+  .theme-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .theme-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

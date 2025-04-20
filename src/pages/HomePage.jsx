@@ -1,8 +1,7 @@
-
 import React, { useState } from "react";
 import ThemeCard from "../components/ThemeCard";
 import themes from "../data/themes.json";
-import "./HomePage.css"; 
+import "./HomePage.css";
 
 const categories = [
   "All",
@@ -10,7 +9,7 @@ const categories = [
   "Economics",
   "Tech and Science",
   "Culture",
-  "Business & Industries"
+  "Business & Industries",
 ];
 
 function HomePage() {
@@ -23,13 +22,16 @@ function HomePage() {
 
   return (
     <div className="homepage-container">
-      <h1>📚 Explore News Timelines</h1>
+        <h1 style={{ fontStyle: "italic" }}>
+            Wait... <span style={{ color: "grey" }}>What?</span>
+        </h1>
       <p>Select a theme to see how the story has evolved.</p>
 
       {/* Category Filters */}
       <div className="category-buttons">
         {categories.map((cat) => (
-          <button key={cat}
+          <button
+            key={cat}
             onClick={() => setSelectedCategory(cat)}
             className={`category-button ${
               selectedCategory === cat ? "active" : ""
@@ -51,4 +53,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
