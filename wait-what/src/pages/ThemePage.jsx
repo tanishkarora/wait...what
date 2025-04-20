@@ -86,7 +86,7 @@ function ThemePage() {
         console.error("Failed to parse LLM timeline JSON:", err, jsonText);
       }
 
-      setArticles(timelineData);
+      return timelineData;
     } catch (err) {
       console.error("Error generating timeline:", err);
     } finally {
@@ -94,11 +94,30 @@ function ThemePage() {
     }
   }, [theme]);
 
-  useEffect(() => {
-    if (theme) {
-      fetchTimelineFromGroq();
+  // First try to fetch from backend, fall back to Grok if backend returns 404
+  const fetchArticles = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/articles/?theme=${theme.title}`);
+      if (res.status === 404) {
+        const grokArticles = await fetchTimelineFromGroq();
+        setArticles(grokArticles);
+      } else if (res.ok) {
+        const data = await res.json();
+        setArticles(data.articles || []);
+      } else {
+        throw new Error('Failed to fetch articles');
+      }
+    } catch (error) {
+      console.error('Error fetching articles:', error);
+    } finally {
+      setLoading(false);
     }
   }, [theme, fetchTimelineFromGroq]);
+
+useEffect(() => {
+  fetchArticles();
+}, [fetchArticles]);
+
 
   if (!theme) {
     return <div>Theme not found.</div>;
