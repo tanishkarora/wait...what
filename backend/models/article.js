@@ -14,7 +14,6 @@
     snippet: {
         type: String,
         required: true,
-        maxlength: 500, // Limit the length of snippet
     },
     significance: {
         type: Number,

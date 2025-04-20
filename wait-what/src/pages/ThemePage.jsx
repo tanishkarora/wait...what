@@ -97,13 +97,26 @@ function ThemePage() {
   // First try to fetch from backend, fall back to Grok if backend returns 404
   const fetchArticles = useCallback(async () => {
     try {
-      const res = await fetch(`/api/articles/?theme=${theme.title}`);
+      const res = await fetch(`/api/articles/?theme=${encodeURIComponent(theme.title)}`);
       if (res.status === 404) {
         const grokArticles = await fetchTimelineFromGroq();
         setArticles(grokArticles);
+
+        // Save Grok-generated articles to backend
+        await fetch("/api/articles", { // Send Grok-generated articles to backend for caching
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(
+            // Flatten articles for backend schema: add theme title to each article
+            grokArticles.map(article => ({ ...article, theme: theme.title }))
+          ),
+        });
+        
       } else if (res.ok) {
         const data = await res.json();
-        setArticles(data.articles || []);
+        setArticles(Array.isArray(data) ? data : []);
       } else {
         throw new Error('Failed to fetch articles');
       }
