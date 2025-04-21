@@ -1,179 +1,338 @@
 [
-    {
-      "id": "russia-ukraine",
-      "title": "Russia–Ukraine War",
-      "description": "Ongoing geopolitical conflict that escalated in 2022.",
-      "category": "Politics",
-      "query": "Russia Ukraine War"
-    },
-    {
-      "id": "us-2024-elections",
-      "title": "US 2024 Elections",
-      "description": "Biden vs Trump rematch, third-party candidates, and legal drama.",
-      "category": "Politics",
-      "query": "US 2024 Presidential Election"
-    },
-    {
-      "id": "india-elections-2024",
-      "title": "India 2024 General Elections",
-      "description": "High-stakes general elections with major national and regional implications.",
-      "category": "Politics",
-      "query": "India General Elections 2024"
-    },
-    {
-      "id": "israel-palestine",
-      "title": "Israel–Palestine Conflict",
-      "description": "Decades-old crisis reignited by recent violence and humanitarian fallout.",
-      "category": "Politics",
-      "query": "Israel Palestine Conflict"
-    },
-    {
-      "id": "china-taiwan-tensions",
-      "title": "China–Taiwan Tensions",
-      "description": "Geopolitical flashpoint involving sovereignty, military drills, and US-China relations.",
-      "category": "Politics",
-      "query": "China Taiwan Tensions"
-    },
-    {
-      "id": "global-inflation-crisis",
-      "title": "Global Inflation Crisis",
-      "description": "Post-COVID inflation, interest rate hikes, and global economic uncertainty.",
-      "category": "Economics",
-      "query": "Global Inflation Crisis"
-    },
-    {
-      "id": "upi-digital-india",
-      "title": "India’s UPI & Digital Payments Boom",
-      "description": "How UPI transformed payments and positioned India as a fintech leader.",
-      "category": "Economics",
-      "query": "India UPI Digital Payments"
-    },
-    {
-      "id": "china-economic-slowdown",
-      "title": "China’s Economic Slowdown",
-      "description": "Real estate collapse, youth unemployment, and slowing GDP growth in China.",
-      "category": "Economics",
-      "query": "China Economic Crisis"
-    },
-    {
-      "id": "global-trade-reshuffling",
-      "title": "Global Trade Shifts & Supply Chain Realignment",
-      "description": "Friendshoring, nearshoring, and efforts to reduce dependence on China.",
-      "category": "Economics",
-      "query": "Global Trade Shifts China Supply Chain"
-    },
-    {
-      "id": "brics-expansion",
-      "title": "BRICS Expansion & De-Dollarization",
-      "description": "How the global south is reshaping global power and trade dynamics.",
-      "category": "Economics",
-      "query": "BRICS expansion de-dollarization"
-    },
-    {
-      "id": "ai-arms-race",
-      "title": "AI Arms Race: OpenAI vs Google vs Anthropic",
-      "description": "Generative AI breakthroughs, corporate rivalries, and ethical concerns.",
-      "category": "Tech and Science",
-      "query": "AI GPT OpenAI Google Anthropic"
-    },
-    {
-      "id": "big-tech-regulation",
-      "title": "Regulation of Big Tech",
-      "description": "Antitrust battles, content moderation laws, and privacy legislation worldwide.",
-      "category": "Tech and Science",
-      "query": "Big Tech Regulation Antitrust TikTok Ban"
-    },
-    {
-      "id": "spacex-space-race",
-      "title": "SpaceX and the Private Space Race",
-      "description": "The rise of private space missions, competition, and colonization goals.",
-      "category": "Tech and Science",
-      "query": "SpaceX Private Space Race NASA Blue Origin"
-    },
-    {
-      "id": "climate-science",
-      "title": "Climate Science & COP28",
-      "description": "IPCC reports, global emissions goals, and COP28 agreements.",
-      "category": "Tech and Science",
-      "query": "Climate Change COP28 IPCC"
-    },
-    {
-      "id": "gene-editing-crispr",
-      "title": "Gene Editing & CRISPR Breakthroughs",
-      "description": "Scientific leaps in gene editing, ethics debates, and regulations.",
-      "category": "Tech and Science",
-      "query": "CRISPR gene editing ethics"
-    },
-    {
-      "id": "cancel-culture-free-speech",
-      "title": "Free Speech vs Cancel Culture",
-      "description": "The ideological and legal battle over speech, expression, and accountability.",
-      "category": "Culture",
-      "query": "Cancel Culture Free Speech"
-    },
-    {
-      "id": "hollywood-strikes",
-      "title": "Hollywood Strikes (2023–24)",
-      "description": "Writer and actor strikes that disrupted Hollywood and raised AI concerns.",
-      "category": "Culture",
-      "query": "Hollywood Writer Actor Strikes 2023"
-    },
-    {
-      "id": "populism-global-rise",
-      "title": "Rise of Right-Wing Populism",
-      "description": "Growing nationalist movements across the US, India, Europe, and beyond.",
-      "category": "Culture",
-      "query": "Right Wing Populism"
-    },
-    {
-      "id": "education-culture-wars",
-      "title": "Education Wars: Curriculum & Ideology",
-      "description": "Clashes over what’s taught in schools — from gender to history.",
-      "category": "Culture",
-      "query": "Curriculum Gender Education Culture War"
-    },
-    {
-      "id": "post-covid-work-culture",
-      "title": "Work Culture Post-COVID",
-      "description": "Remote work, quiet quitting, burnout, and hybrid workforce battles.",
-      "category": "Culture",
-      "query": "Remote Work Hybrid Quiet Quitting"
-    },
-    {
-      "id": "svb-collapse",
-      "title": "Silicon Valley Bank Collapse & Banking Volatility",
-      "description": "How SVB's failure triggered wider financial anxiety in the tech sector.",
-      "category": "Business & Industries",
-      "query": "SVB collapse banking crisis"
-    },
-    {
-      "id": "openai-drama",
-      "title": "OpenAI’s Leadership Shakeup",
-      "description": "Altman's ousting and return, boardroom drama, and investor chaos.",
-      "category": "Business & Industries",
-      "query": "OpenAI Altman board drama"
-    },
-    {
-      "id": "indian-startups-2024",
-      "title": "Indian Startup Ecosystem in 2024",
-      "description": "Layoffs, funding crunch, IPO delays, and survival mode.",
-      "category": "Business & Industries",
-      "query": "Indian startup funding 2024"
-    },
-    {
-      "id": "ev-industry-battery-wars",
-      "title": "EV Industry & Battery Wars",
-      "description": "The global race to dominate EVs and control critical battery tech.",
-      "category": "Business & Industries",
-      "query": "Electric Vehicles Battery Tech Tesla Tata BYD"
-    },
-    {
-      "id": "luxury-boom-asia",
-      "title": "Luxury’s Boom in Asia",
-      "description": "How India and Southeast Asia are becoming new luxury hotspots.",
-      "category": "Business & Industries",
-      "query": "Luxury brands Asia LVMH India Southeast Asia"
-    }
+  {
+  "id": "bjp-third-term",
+  "title": "BJP\u2019s Third Term: Policies and Governance",
+  "description": "Legislative and policy changes by the BJP government since June 2024.",
+  "category": "Politics",
+  "query": "BJP India 2024 policies governance"
+  },
+  {
+  "id": "trump-tariffs",
+  "title": "Trump\u2019s Tariff Policies and Global Repercussions",
+  "description": "Global economic fallout from President Trump\u2019s aggressive tariff moves.",
+  "category": "Politics",
+  "query": "Trump Tariffs Global Trade 2025"
+  },
+  {
+  "id": "india-global-politics",
+  "title": "India\u2019s Strategic Positioning in Global Politics",
+  "description": "India\u2019s push for greater influence in global forums and multilateral diplomacy.",
+  "category": "Politics",
+  "query": "India global politics diplomacy unsc 2025"
+  },
+  {
+  "id": "israel-iran-nuclear",
+  "title": "Israel\u2013Iran Tensions Over Nuclear Concerns",
+  "description": "Escalation in Middle East over Iran's nuclear ambitions and Israel\u2019s response.",
+  "category": "Politics",
+  "query": "Israel Iran nuclear conflict 2025"
+  },
+  {
+  "id": "eu-economic-security",
+  "title": "EU\u2019s Economic Security Measures",
+  "description": "The European Union\u2019s coordinated efforts to protect trade and tech sovereignty.",
+  "category": "Politics",
+  "query": "EU economic security export control 2025"
+  },
+  {
+  "id": "uk-net-zero",
+  "title": "UK\u2019s Net Zero Policy Debates",
+  "description": "Political disputes in the UK over sustainability and economic impact.",
+  "category": "Politics",
+  "query": "UK net zero politics economy 2025"
+  },
+  {
+  "id": "china-global-influence",
+  "title": "China\u2019s Global Influence and Trade Relations",
+  "description": "China's strategic moves in global trade and influence in emerging markets.",
+  "category": "Politics",
+  "query": "China global trade strategy 2025"
+  },
+  {
+  "id": "us-india-trade",
+  "title": "US\u2013India Bilateral Relations Amid Trade Shifts",
+  "description": "Changing dynamics in US\u2013India trade, tech partnerships and diplomacy.",
+  "category": "Politics",
+  "query": "US India trade diplomacy tariffs 2025"
+  },
+  {
+  "id": "middle-east-geopolitics",
+  "title": "Middle East Geopolitical Developments",
+  "description": "New alliances, conflicts and diplomacy in the Middle East.",
+  "category": "Politics",
+  "query": "Middle East geopolitics alliances conflict 2025"
+  },
+  {
+  "id": "africa-global-role",
+  "title": "Africa\u2019s Emerging Role in Global Politics",
+  "description": "How Africa is shaping international politics through new partnerships.",
+  "category": "Politics",
+  "query": "Africa global politics 2025 BRICS diplomacy"
+  },
+  {
+  "id": "india-tariffs-impact",
+  "title": "Impact of US Tariffs on India\u2019s Economy",
+  "description": "How new US tariffs are affecting India's trade and growth outlook.",
+  "category": "Economics",
+  "query": "India economy US tariffs impact 2025"
+  },
+  {
+  "id": "rbi-monetary-policy",
+  "title": "India\u2019s Monetary Policy Adjustments",
+  "description": "RBI's interest rate decisions amid inflation and global uncertainty.",
+  "category": "Economics",
+  "query": "RBI interest rates inflation India 2025"
+  },
+  {
+  "id": "india-infrastructure-investment",
+  "title": "Public Spending and Infrastructure Development",
+  "description": "Government investments in infrastructure to boost long-term growth.",
+  "category": "Economics",
+  "query": "India infrastructure spending budget 2025"
+  },
+  {
+  "id": "india-startups-funding",
+  "title": "Startup Ecosystem and Funding Trends",
+  "description": "Venture capital trends and challenges in India\u2019s startup ecosystem.",
+  "category": "Economics",
+  "query": "India startup funding 2025 VC"
+  },
+  {
+  "id": "india-agriculture-reform",
+  "title": "Agricultural Reforms and Rural Economy",
+  "description": "Recent agricultural reforms and their impact on rural income.",
+  "category": "Economics",
+  "query": "India agriculture reform rural economy 2025"
+  },
+  {
+  "id": "india-digital-economy",
+  "title": "Digital Economy and Financial Inclusion",
+  "description": "Digital payments, UPI growth, and tech-driven financial inclusion.",
+  "category": "Economics",
+  "query": "India digital economy UPI fintech 2025"
+  },
+  {
+  "id": "us-tariff-slowdown",
+  "title": "Economic Slowdown Amid Tariff Policies",
+  "description": "Economic pressures and consumer impact from US trade wars.",
+  "category": "Economics",
+  "query": "US economy tariffs slowdown 2025"
+  },
+  {
+  "id": "us-fed-policy",
+  "title": "Federal Reserve\u2019s Interest Rate Decisions",
+  "description": "The Fed\u2019s attempts to manage inflation and market reactions.",
+  "category": "Economics",
+  "query": "US Federal Reserve interest rate 2025"
+  },
+  {
+  "id": "us-consumer-spending",
+  "title": "Consumer Confidence and Spending Patterns",
+  "description": "How inflation and policy changes are shaping consumer sentiment.",
+  "category": "Economics",
+  "query": "US consumer spending inflation confidence 2025"
+  },
+  {
+  "id": "eu-ecb-cuts",
+  "title": "ECB\u2019s Interest Rate Cuts and Economic Outlook",
+  "description": "The European Central Bank\u2019s response to stagnation and debt.",
+  "category": "Economics",
+  "query": "ECB interest rate cut EU economy 2025"
+  },
+  {
+  "id": "ai-arms-race",
+  "title": "AI Arms Race",
+  "description": "Geopolitical and corporate competition for dominance in artificial intelligence.",
+  "category": "Tech and Science",
+  "query": "AI arms race US China 2025"
+  },
+  {
+  "id": "agri-tech",
+  "title": "Agri-tech",
+  "description": "Technological innovations revolutionizing agriculture and food systems.",
+  "category": "Tech and Science",
+  "query": "Agricultural technology innovation 2025"
+  },
+  {
+  "id": "space-exploration",
+  "title": "Space Exploration",
+  "description": "Missions and commercialization of space by private and public entities.",
+  "category": "Tech and Science",
+  "query": "Space exploration missions 2025"
+  },
+  {
+  "id": "renewable-energy-tech",
+  "title": "Renewable Energy Technologies",
+  "description": "Advancements in solar, wind, hydrogen and clean energy storage.",
+  "category": "Tech and Science",
+  "query": "Renewable energy technology 2025"
+  },
+  {
+  "id": "cybersecurity-ai",
+  "title": "Cybersecurity Challenges and AI Integration",
+  "description": "AI\u2019s role in enhancing and threatening digital security infrastructure.",
+  "category": "Tech and Science",
+  "query": "Cybersecurity AI threats and solutions 2025"
+  },
+  {
+  "id": "biotech-healthcare",
+  "title": "Biotechnology and Healthcare Innovations",
+  "description": "Breakthroughs in biotech, genomics, and AI-powered healthcare.",
+  "category": "Tech and Science",
+  "query": "Biotech healthcare innovations 2025"
+  },
+  {
+  "id": "ai-industry-applications",
+  "title": "AI: Industry Applications",
+  "description": "Adoption of AI across finance, education, law, retail and logistics.",
+  "category": "Tech and Science",
+  "query": "AI industry sector applications 2025"
+  },
+  {
+  "id": "scientific-discoveries",
+  "title": "Groundbreaking Scientific Discoveries",
+  "description": "Notable scientific findings across physics, astronomy, and biology.",
+  "category": "Tech and Science",
+  "query": "Major scientific discoveries 2025"
+  },
+  {
+  "id": "communal-tensions-india",
+  "title": "Communal Tensions in India: Manipur and Nagpur",
+  "description": "Violence and unrest stemming from religious and ethnic tensions.",
+  "category": "Culture",
+  "query": "Manipur Nagpur India communal violence 2025"
+  },
+  {
+  "id": "waqf-act-west-bengal",
+  "title": "Protests Against the Waqf (Amendment) Act in West Bengal",
+  "description": "Public unrest over religious property rights law.",
+  "category": "Culture",
+  "query": "Waqf amendment act protest West Bengal 2025"
+  },
+  {
+  "id": "investigative-agencies-politics",
+  "title": "Political Use of Investigative Agencies in India",
+  "description": "Allegations of agency misuse to suppress political opposition.",
+  "category": "Culture",
+  "query": "India CBI ED misuse politics 2025"
+  },
+  {
+  "id": "internet-shutdowns-india",
+  "title": "Internet Shutdowns and Digital Rights in India",
+  "description": "Censorship and civil liberty challenges from internet blackouts.",
+  "category": "Culture",
+  "query": "Internet shutdowns India digital rights 2025"
+  },
+  {
+  "id": "naxalite-insurgency-response",
+  "title": "Naxalite Insurgency and State Response",
+  "description": "Violence and counter-insurgency operations in central India.",
+  "category": "Culture",
+  "query": "Naxal insurgency Chhattisgarh 2025"
+  },
+  {
+  "id": "south-sudan-divisions",
+  "title": "Ethnic and Political Divisions in South Sudan",
+  "description": "Conflict over elections, peace deals and ethnic divides.",
+  "category": "Culture",
+  "query": "South Sudan political ethnic conflict 2025"
+  },
+  {
+  "id": "sudan-civil-war-crisis",
+  "title": "Humanitarian Crisis Amid Sudan's Civil War",
+  "description": "Human displacement and famine amid prolonged civil war.",
+  "category": "Culture",
+  "query": "Sudan civil war humanitarian crisis 2025"
+  },
+  {
+  "id": "religious-conflicts-displacement",
+  "title": "Global Religious Conflicts and Displacement",
+  "description": "Religious violence triggering global refugee crises.",
+  "category": "Culture",
+  "query": "Religious conflict displacement world 2025"
+  },
+  {
+  "id": "freedom-expression-censorship",
+  "title": "Freedom of Expression and Censorship",
+  "description": "Crackdowns on free speech by governments worldwide.",
+  "category": "Culture",
+  "query": "Freedom expression censorship global 2025"
+  },
+  {
+  "id": "climate-change-inequality",
+  "title": "Climate Change and Social Inequality",
+  "description": "Disproportionate climate impacts on marginalized communities.",
+  "category": "Culture",
+  "query": "Climate change social inequality 2025"
+  },
+  {
+  "id": "retail-ecommerce-india",
+  "title": "Retail and E-Commerce \u2013 India",
+  "description": "Trends in Indian online retail, quick commerce, and consumer behavior.",
+  "category": "Business & Industries",
+  "query": "India retail ecommerce trends 2025"
+  },
+  {
+  "id": "energy-power-india",
+  "title": "Energy & Power \u2013 India",
+  "description": "India's investment in energy storage, grid expansion and renewables.",
+  "category": "Business & Industries",
+  "query": "India energy power sector 2025"
+  },
+  {
+  "id": "startups-india",
+  "title": "Startups \u2013 India",
+  "description": "Startup funding, policies and unicorn tracking in India.",
+  "category": "Business & Industries",
+  "query": "Indian startup ecosystem funding 2025"
+  },
+  {
+  "id": "startups-global",
+  "title": "Startups \u2013 Global",
+  "description": "Global startup trends in AI, sustainability and automation.",
+  "category": "Business & Industries",
+  "query": "Global startup trends funding 2025"
+  },
+  {
+  "id": "deeptech-global",
+  "title": "Deeptech \u2013 Global",
+  "description": "Breakthroughs in quantum, robotics, and advanced engineering startups.",
+  "category": "Business & Industries",
+  "query": "Deeptech investments global 2025"
+  },
+  {
+  "id": "aviation-industry",
+  "title": "Aviation",
+  "description": "Tariffs, cyber risks, and fleet trends in global aviation.",
+  "category": "Business & Industries",
+  "query": "Aviation airlines industry outlook 2025"
+  },
+  {
+  "id": "automobiles-india",
+  "title": "Automobiles \u2013 India",
+  "description": "SUV and EV sales and R&D policy for India\u2019s auto industry.",
+  "category": "Business & Industries",
+  "query": "India automobile EV market 2025"
+  },
+  {
+  "id": "energy-global",
+  "title": "Energy & Power \u2013 Global",
+  "description": "Global trends in clean energy investments and transition.",
+  "category": "Business & Industries",
+  "query": "Global energy clean power trends 2025"
+  },
+  {
+  "id": "banking-india",
+  "title": "Banking \u2013 India",
+  "description": "Deposit growth, rate cuts and digital innovation in banking.",
+  "category": "Business & Industries",
+  "query": "Indian banking sector trends 2025"
+  },
+  {
+  "id": "banking-global",
+  "title": "Banking \u2013 Global",
+  "description": "ESG, fintech, and digital transformation in global banking.",
+  "category": "Business & Industries",
+  "query": "Global banking trends ESG fintech 2025"
+  }
   ]
-  
-  

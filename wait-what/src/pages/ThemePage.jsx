@@ -21,7 +21,6 @@ function ThemePage() {
     });
 
   const fetchTimelineFromGroq = useCallback(async () => {
-    setLoading(true);
 
     const prompt = `
   You are a timeline builder for a news explainer app.
@@ -143,9 +142,6 @@ useEffect(() => {
 
       <hr style={{ margin: "24px 0" }} />
       <div style={{ margin: "24px 0" }}>
-        <label>
-          <strong>View:</strong>
-        </label>
         <div
   style={{
     display: "flex",

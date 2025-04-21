@@ -43,11 +43,20 @@ function HomePage() {
       </div>
 
       {/* Theme Cards */}
-      <div className="theme-card-grid">
-        {filteredThemes.map((theme) => (
-          <ThemeCard key={theme.id} theme={theme} />
-        ))}
-      </div>
+      <div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+    gap: "24px",
+    padding: "40px",
+    backdropFilter: "blur(6px)",
+  }}
+>
+  {filteredThemes.map((theme) => (
+    <ThemeCard key={theme.id} theme={theme} />
+  ))}
+</div>
+
     </div>
   );
 }
